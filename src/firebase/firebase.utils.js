@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, doc, addDoc, setDoc, getDocs, getDoc } from "firebase/firestore";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom'
 
 const config = {
 	apiKey: "AIzaSyBrnMP_IxaR-gxoHMTgfD30vAzdbCVmCNI",
@@ -28,7 +29,7 @@ export const signInWithGoogle = () => {
 	console.log('signing in')
 	signInWithPopup(auth, provider)
 	.then((result) => {
-		// console.log(result)
+		
 	}).catch(err => console.log(err))
 }
 
